@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AB9C486-1D68-4DB2-95F7-D1F96F937439}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>do_an_demo</RootNamespace>
+    <AssemblyName>do_an_demo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectDB.cs" />
+    <Compile Include="CRUD.cs" />
+    <Compile Include="dltk.cs" />
+    <Compile Include="Chấm điểm\Frm_Chamdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chấm điểm\Frm_Chamdiem.Designer.cs">
+      <DependentUpon>Frm_Chamdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chấm điểm\Frm_Chitietchamdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chấm điểm\Frm_Chitietchamdiem.Designer.cs">
+      <DependentUpon>Frm_Chitietchamdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Frm_DangNhap.Designer.cs">
+      <DependentUpon>Frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MahoidongDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MahoidongDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_QLTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_QLTG.Designer.cs">
+      <DependentUpon>Frm_QLTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_QLHDGK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_QLHDGK.Designer.cs">
+      <DependentUpon>Frm_QLHDGK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_QLGK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_QLGK.Designer.cs">
+      <DependentUpon>Frm_QLGK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_QLSK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_QLSK.Designer.cs">
+      <DependentUpon>Frm_QLSK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí tài khoản\Frm_DLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí tài khoản\Frm_DLTK.Designer.cs">
+      <DependentUpon>Frm_DLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Frm_MainAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Frm_MainAD.Designer.cs">
+      <DependentUpon>Frm_MainAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí tài khoản\Frm_QLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí tài khoản\Frm_QLTK.Designer.cs">
+      <DependentUpon>Frm_QLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_SuaChiTietHoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_SuaChiTietHoiDong.Designer.cs">
+      <DependentUpon>Frm_SuaChiTietHoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_SuaNguoiThamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_SuaNguoiThamGia.designer.cs">
+      <DependentUpon>Frm_SuaNguoiThamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_SuaThongTinGiamKhao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_SuaThongTinGiamKhao.Designer.cs">
+      <DependentUpon>Frm_SuaThongTinGiamKhao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_SuaThongTinHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_SuaThongTinHD.Designer.cs">
+      <DependentUpon>Frm_SuaThongTinHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_SuaThongTinSangKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_SuaThongTinSangKien.Designer.cs">
+      <DependentUpon>Frm_SuaThongTinSangKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_SuaThongTinTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_SuaThongTinTacGia.Designer.cs">
+      <DependentUpon>Frm_SuaThongTinTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_ThemChiTietHoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_ThemChiTietHoiDong.Designer.cs">
+      <DependentUpon>Frm_ThemChiTietHoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_ThemGiamKhao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí giám khảo\Frm_ThemGiamKhao.Designer.cs">
+      <DependentUpon>Frm_ThemGiamKhao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_ThemHoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí hội đồng khoa học\Frm_ThemHoiDong.Designer.cs">
+      <DependentUpon>Frm_ThemHoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_ThemNguoiTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_ThemNguoiTG.designer.cs">
+      <DependentUpon>Frm_ThemNguoiTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_ThemSangKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí sáng kiến\Frm_ThemSangKien.Designer.cs">
+      <DependentUpon>Frm_ThemSangKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_ThemTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lí tác giả\Frm_ThemTacGia.Designer.cs">
+      <DependentUpon>Frm_ThemTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SangKienMBFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SangKienMBFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SangKienMBFDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SangKienMBFDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SangKienMBFDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SangKienMBFDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TacgiaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TacgiaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Chấm điểm\Frm_Chamdiem.resx">
+      <DependentUpon>Frm_Chamdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chấm điểm\Frm_Chitietchamdiem.resx">
+      <DependentUpon>Frm_Chitietchamdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Frm_DangNhap.resx">
+      <DependentUpon>Frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí tác giả\Frm_QLTG.resx">
+      <DependentUpon>Frm_QLTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí hội đồng khoa học\Frm_QLHDGK.resx">
+      <DependentUpon>Frm_QLHDGK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí giám khảo\Frm_QLGK.resx">
+      <DependentUpon>Frm_QLGK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí sáng kiến\Frm_QLSK.resx">
+      <DependentUpon>Frm_QLSK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí tài khoản\Frm_DLTK.resx">
+      <DependentUpon>Frm_DLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Frm_MainAD.resx">
+      <DependentUpon>Frm_MainAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí tài khoản\Frm_QLTK.resx">
+      <DependentUpon>Frm_QLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí hội đồng khoa học\Frm_SuaChiTietHoiDong.resx">
+      <DependentUpon>Frm_SuaChiTietHoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí sáng kiến\Frm_SuaNguoiThamGia.resx">
+      <DependentUpon>Frm_SuaNguoiThamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí giám khảo\Frm_SuaThongTinGiamKhao.resx">
+      <DependentUpon>Frm_SuaThongTinGiamKhao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí hội đồng khoa học\Frm_SuaThongTinHD.resx">
+      <DependentUpon>Frm_SuaThongTinHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí sáng kiến\Frm_SuaThongTinSangKien.resx">
+      <DependentUpon>Frm_SuaThongTinSangKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí tác giả\Frm_SuaThongTinTacGia.resx">
+      <DependentUpon>Frm_SuaThongTinTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí hội đồng khoa học\Frm_ThemChiTietHoiDong.resx">
+      <DependentUpon>Frm_ThemChiTietHoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí giám khảo\Frm_ThemGiamKhao.resx">
+      <DependentUpon>Frm_ThemGiamKhao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí hội đồng khoa học\Frm_ThemHoiDong.resx">
+      <DependentUpon>Frm_ThemHoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí sáng kiến\Frm_ThemNguoiTG.resx">
+      <DependentUpon>Frm_ThemNguoiTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí sáng kiến\Frm_ThemSangKien.resx">
+      <DependentUpon>Frm_ThemSangKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quản lí tác giả\Frm_ThemTacGia.resx">
+      <DependentUpon>Frm_ThemTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="MahoidongDataSet3.xsc">
+      <DependentUpon>MahoidongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MahoidongDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MahoidongDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MahoidongDataSet3.xss">
+      <DependentUpon>MahoidongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SangKienMBFDataSet.xsc">
+      <DependentUpon>SangKienMBFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SangKienMBFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SangKienMBFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SangKienMBFDataSet.xss">
+      <DependentUpon>SangKienMBFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SangKienMBFDataSet1.xsc">
+      <DependentUpon>SangKienMBFDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SangKienMBFDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SangKienMBFDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SangKienMBFDataSet1.xss">
+      <DependentUpon>SangKienMBFDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SangKienMBFDataSet2.xsc">
+      <DependentUpon>SangKienMBFDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SangKienMBFDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SangKienMBFDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SangKienMBFDataSet2.xss">
+      <DependentUpon>SangKienMBFDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TacgiaDataSet3.xsc">
+      <DependentUpon>TacgiaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TacgiaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TacgiaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TacgiaDataSet3.xss">
+      <DependentUpon>TacgiaDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
